@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AssessActivity"
+    tools:showIn="@layout/activity_course_detail"
+>
+
+    <TextView
+        android:id="@+id/courseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Course Name"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/editCourseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editCourseName" />
+
+    <EditText
+        android:id="@+id/editCourseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:hint="Enter Course Name"
+        app:layout_constraintLeft_toRightOf="@+id/courseName" />
+
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Start Date"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editStartDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editStartDate" />
+
+    <TextView
+        android:id="@+id/editStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/set_date"
+        android:inputType="date"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toRightOf="@+id/startDate"
+        app:layout_constraintTop_toBottomOf="@id/editCourseName" />
+
+    <Button
+        android:id="@+id/courseStartRemind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_reminder"
+        app:layout_constraintBottom_toBottomOf="@+id/editStartDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editStartDate"
+        app:layout_constraintTop_toTopOf="@+id/editStartDate"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="4dp"
+        android:background="@drawable/mybutton"/>
+
+    <TextView
+        android:id="@+id/endDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="End Date"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editEndDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editEndDate" />
+
+    <TextView
+        android:id="@+id/editEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/set_date"
+        android:inputType="date"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toRightOf="@+id/endDate"
+        app:layout_constraintTop_toBottomOf="@id/editStartDate" />
+
+    <Button
+        android:id="@+id/courseEndRemind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mybutton"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="4dp"
+        android:text="@string/set_reminder"
+        app:layout_constraintBottom_toBottomOf="@+id/editEndDate"
+        app:layout_constraintEnd_toEndOf="@+id/courseStartRemind"
+        app:layout_constraintStart_toStartOf="@+id/courseStartRemind"
+        app:layout_constraintTop_toTopOf="@+id/editEndDate" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Status"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/pickStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pickStatus" />
+
+    <Spinner
+        android:id="@+id/pickStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:hint="Status"
+        android:scrollbarSize="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/status"
+        app:layout_constraintTop_toBottomOf="@id/editEndDate" />
+
+    <TextView
+        android:id="@+id/mentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Mentor"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/pickMentor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pickMentor"
+        android:foregroundGravity="left"/>
+
+    <Spinner
+        android:id="@+id/pickMentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/mentor"
+        app:layout_constraintTop_toBottomOf="@id/pickStatus"/>
+
+    <Button
+        android:id="@+id/mentor_info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/mybutton"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="4dp"
+        android:text="Show Info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickStatus" />
+
+    <TextView
+        android:id="@+id/mentorNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/pickMentor"
+        app:layout_constraintLeft_toLeftOf="@+id/pickMentor"
+        android:autoLink="phone"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/mentorEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/mentorNumber"
+        app:layout_constraintLeft_toLeftOf="@+id/mentorNumber"
+        android:autoLink="email"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/showNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/mybutton"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="4dp"
+        android:text="Show Note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEmail" />
+
+    <Button
+        android:id="@+id/shareNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/mybutton"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="4dp"
+        android:text="Share Note"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/mentorEmail"
+        app:layout_constraintStart_toEndOf="@id/showNote" />
+
+    <EditText
+        android:id="@+id/editNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="Enter note here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showNote"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/save_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/button_save"
+        android:textColor="@color/buttonLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNote" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/associated_assess"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        android:isScrollContainer="true"
+        app:layout_constraintTop_toBottomOf="@+id/save_course"
+        tools:listitem="@layout/assess_list_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
